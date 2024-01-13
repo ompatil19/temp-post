@@ -9,6 +9,8 @@ app.post('/api/data', (req, res) => {
         if (!postData || Object.keys(postData).length === 0) {
             return res.status(400).json({ error: 'Invalid data. Please provide valid data.' });
         }
+        console.log('POST request successful');
+        console.log('Data:', postData); 
         res.status(201).json({ message: 'POST request successful', data: postData });
     } catch (error) {
         console.error('Error processing POST request:', error);
